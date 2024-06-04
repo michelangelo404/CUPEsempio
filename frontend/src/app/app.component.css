@@ -1,0 +1,12 @@
+mat-nav-list.list-horizontal {
+  padding: 0;
+  .mat-list-item {
+    display: inline-block;
+    height: auto;
+    width: auto;
+  }
+}
+
+body {
+  background: rgb(122, 153, 153);
+}

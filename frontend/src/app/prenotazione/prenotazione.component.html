@@ -1,0 +1,36 @@
+<div>
+  <form id="formCercaPaziente" (ngSubmit)="ricerca()" (click)="apriListaTimeout()">
+    <input type="text" [(ngModel)]="nome" name="nome" placeholder="Nome">
+    <input type="text" [(ngModel)]="cognome" name="cognome" placeholder="Cognome">
+    <input type="text" [(ngModel)]="codiceFiscale" name="codiceFiscale" placeholder="Codice fiscale">
+    <button mat-raised-button color="primary" type="submit">Cerca</button>
+  </form>
+  <app-lista-pazienti *ngIf="visibleLista"></app-lista-pazienti>
+</div>
+
+<div class="inserimentoPrenotazione">
+  <form [formGroup]="myForm" (ngSubmit)="inserisciPrenotazione()" style="margin-left: 10%; margin-right: 60%; width: 210px;">
+    <div></div>
+    <mat-form-field class="example-full-width">
+      <mat-label for="nome">Codice prestazione</mat-label>
+      <input class="form-control" matInput type="text" name="nome" formControlName="codicePrestazione" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label for="nome">Id paziente</mat-label>
+      <input class="form-control" matInput type="text" name="nome" formControlName="idPaziente" required>
+    </mat-form-field>
+    <div></div>
+    <mat-form-field>
+      <input class="form-control" [matDatepicker]="picker" matInput type="text" placeholder="Data della prenotazione" formControlName="dataPrenotazione" name="dataPrenotazione" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Ora</mat-label>
+      <mat-select formControlName="oraPrenotazione" name="oraPrenotazione">
+        <mat-option *ngFor="let time of times" [value]="time">{{ time }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!myForm.valid" style="right: 50%;left: 50%; position: relative;">Invia</button>
+  </form>
+</div>

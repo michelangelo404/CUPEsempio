@@ -1,0 +1,22 @@
+<body>
+  <mat-toolbar color="grey">
+    Sito prenotazioni
+  </mat-toolbar>
+  <mat-toolbar color="primary">
+    <mat-nav-list class="list-horizontal">
+      <mat-list-item>
+        <a (click)="onPress($event)">Inserisci paziente</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a (click)="onPress($event)">Nuova prenotazione</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a (click)="onPress($event)">Lista prenotazioni</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-toolbar>
+  <app-inserimento *ngIf="visibleInserimento"></app-inserimento>
+  <app-lista *ngIf="visibleLista"></app-lista>
+  <app-prenotazione *ngIf="visiblePrenotazione" >
+  </app-prenotazione>
+</body>

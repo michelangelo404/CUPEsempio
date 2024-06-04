@@ -1,0 +1,26 @@
+<!-- modal.component.html -->
+<div class="modal" *ngIf="visible">
+  <div class="modal">
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <input type="text" formControlName="name" placeholder="Name">
+      <input type="email" formControlName="email" placeholder="Email">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- list.component.html -->
+  <ul>
+    <li *ngFor="let item of items">{{ item.name }} - {{ item.email }}</li>
+  </ul>
+
+  <!-- modal.component.html -->
+  <div class="modal" *ngIf="visible">
+    <div class="modal-content">
+      <!-- Form and content here -->
+      <button (click)="close()">Close</button>
+
+    </div>
+  </div>
+</div>
+
+

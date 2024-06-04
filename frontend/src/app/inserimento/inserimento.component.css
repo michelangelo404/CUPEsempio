@@ -1,0 +1,10 @@
+.inserimentoPaziente {
+  margin-left: 50px;
+}
+
+body {background-color: rgba(40, 55, 83, 0.628)}
+
+button:disabled{
+  cursor:not-allowed;
+  opacity:0.5
+}

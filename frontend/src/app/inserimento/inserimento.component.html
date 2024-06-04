@@ -1,0 +1,26 @@
+<div class="inserimentoPaziente">
+  <form [formGroup]="myForm" (ngSubmit)="inserisciPaziente()" style="margin-left: auto; margin-right: auto; width: 210px;">
+    <mat-form-field class="example-full-width">
+      <mat-label for="nome">Nome</mat-label>
+      <input class="form-control" matInput type="text" name="nome" formControlName="nome" required>
+    </mat-form-field>
+    <div></div>
+    <mat-form-field class="example-full-width">
+      <mat-label for="cognome">Cognome</mat-label>
+      <input class="form-control" matInput type="text" name="cognome" formControlName="cognome" required>
+    </mat-form-field>
+    <div></div>
+    <mat-form-field>
+      <input class="form-control" [matDatepicker]="picker" matInput type="text" placeholder="Data di nascita" formControlName="dataNascita" name="dataNascita" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <section style="display: table; text-align: center;">
+      <div class="example-button-row">
+        <button mat-flat-button type="submit" [disabled]="!myForm.valid" style="left: 50%; position: absolute;">Inserisci</button>
+      </div>
+    </section>
+  </form>
+</div>
+
+
