@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListaComponent } from './lista/lista.component';
 import { InserimentoComponent } from './inserimento/inserimento.component';
 import { DatePipe } from '@angular/common';
+import { FormatDataPipe } from './lista/formatData.pipe';
 import { PrenotazioneComponent } from './prenotazione/prenotazione.component';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { ListaPazientiComponent } from './lista-pazienti/lista-pazienti.component';
@@ -34,7 +35,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ListaComponent,
     ListaPazientiComponent,
     PrenotazioneComponent,
-    AppComponent
+    AppComponent,
+    FormatDataPipe
    ],
   imports: [
     MatSelectModule,
@@ -58,7 +60,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     NgxMaterialTimepickerModule,
     MatSelectModule,
   ],
-  providers: [DatePipe],
+  providers: [DatePipe,FormatDataPipe],
   bootstrap: [AppComponent],
 
 })
