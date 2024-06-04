@@ -22,4 +22,8 @@ Poi creeremo il nostro container docker, utilizando il file jar appena creato:
 e lo avvieremo con questo comando:
 `docker run --name springboot --network=progetto-spring -p 8080:8080 springboot`
 
+### Step 4
+il terzo ed ultimo container che creeremo è quello per il frontend in angular
+
+
 
