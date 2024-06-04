@@ -1,0 +1,6 @@
+com\example\demo\controllers\PazienteController.class
+com\example\demo\services\PazienteService.class
+com\example\demo\PrimoProgettoApplication.class
+com\example\demo\model\Responso.class
+com\example\demo\model\Paziente.class
+com\example\demo\repositories\DataAccessRepo.class

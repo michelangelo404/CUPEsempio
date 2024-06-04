@@ -1,0 +1,15 @@
+# Created at 2024-04-29T22:57:38.857
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '#'.
+
+# Created at 2024-04-29T22:57:38.861
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# There is insufficient memory for the Java Runtime Environment to continue.'.
+
+# Created at 2024-04-29T22:57:38.863
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# Native memory allocation (mmap) failed to map 132120576 bytes for G1 virtual space'.
+
+# Created at 2024-04-29T22:57:38.864
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# An error report file with more information is saved as:'.
+
+# Created at 2024-04-29T22:57:38.896
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# D:\eclipse-workspace\primo-progetto\hs_err_pid11940.log'.
+

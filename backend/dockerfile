@@ -1,0 +1,14 @@
+# Usa un'immagine di base con Java
+FROM openjdk:17-jdk-slim
+
+# Crea la directory di lavoro
+WORKDIR /app
+
+# Copia il jar Spring Boot nella directory di lavoro
+COPY target/primo-progetto-0.0.1-SNAPSHOT.jar .
+
+# Espone la porta 8080 per il backend Spring Boot
+EXPOSE 8080
+
+# Esegui il jar Spring Boot
+CMD ["java", "-jar", "primo-progetto-0.0.1-SNAPSHOT.jar"]
