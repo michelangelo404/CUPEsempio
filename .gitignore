@@ -1,3 +1,5 @@
 #Escludi node_modules
 frontend/node_modules
 frontend/.angular/cache
+backend/target/primo-progetto-0.0.1-SNAPSHOT.jar
+backend/target/primo-progetto-0.0.1-SNAPSHOT.jar.original

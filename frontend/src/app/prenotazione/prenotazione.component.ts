@@ -32,12 +32,11 @@ export class PrenotazioneComponent implements OnInit {
     private datePipe: DatePipe,
     private formBuilder: FormBuilder,) {
       this.myForm = this.formBuilder.group({
-        dataPrenotazione: ['', Validators.required],
-        oraPrenotazione: ['', Validators.required],
-        dataContatto: ['', [Validators.required]],
-        prestazione: ['', [Validators.required]],
-        codicePrestazione: ['', [Validators.required]],
-        idPaziente: ['', [Validators.required]],
+        dataprenotazione: ['', Validators.required],
+        oraprenotazione: ['', Validators.required],
+        codiceprestazione: ['', [Validators.required]],
+        idpaziente: ['', [Validators.required]],
+        datacontatto: ''
       });
     }
 
@@ -46,23 +45,16 @@ export class PrenotazioneComponent implements OnInit {
   }
 
   inserisciPrenotazione() {
-    var dataNascita = this.myForm.value.dataNascita;
+    let yourDate = new Date()
     this.myForm.setValue({
-      codicePrestazione: this.myForm.value.codicePrestazione,
-      prestazione: this.myForm.value.prestazione,
-      idPaziente: this.myForm.value.idPaziente,
-      dataPrenotazione: this.datePipe.transform(this.myForm.value.dataPrenotazione, "yyyyMMdd"),
-      dataContatto: this.datePipe.transform(this.myForm.value.dataContatto, "yyyyMMdd")
+      codiceprestazione: this.myForm.value.codiceprestazione,
+      idpaziente: this.myForm.value.idpaziente,
+      dataprenotazione: this.datePipe.transform(this.myForm.value.dataprenotazione, "yyyyMMdd"),
+      datacontatto: this.datePipe.transform(yourDate, "yyyyMMdd"),
+      oraprenotazione: this.myForm.value.oraprenotazione,
     });
     this.servizioApi.addPrenotazione(this.myForm.value).subscribe((ritorno: any[]) => {
       console.log(ritorno);
-    });
-    this.myForm.setValue({
-      codicePrestazione: this.myForm.value.codicePrestazione,
-      prestazione: this.myForm.value.prestazione,
-      idPaziente: this.myForm.value.idPaziente,
-      dataPrenotazione: this.datePipe.transform(this.myForm.value.dataPrenotazione, "yyyyMMdd"),
-      dataContatto: this.datePipe.transform(this.myForm.value.dataContatto, "yyyyMMdd")
     });
   }
 

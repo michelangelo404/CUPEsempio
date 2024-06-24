@@ -92,12 +92,12 @@ public class PrenotazioneService implements DataAccessRepo<Prenotazione> {
 		boolean risultato = false;
 
 		try {
-			Prenotazione temp = sessione.get(Prenotazione.class, t.getIdPrenotazione());
+			Prenotazione temp = sessione.get(Prenotazione.class, t.getIdprenotazione());
 
-			if(t.getDataPrenotazione() != null)
-				temp.setDataPrenotazione(t.getDataPrenotazione());
-			if(t.getOraPrenotazione() != null)
-				temp.setOraPrenotazione(t.getOraPrenotazione());
+			if(t.getOraprenotazione() != null)
+				temp.setDataprenotazione(t.getOraprenotazione());
+			if(t.getOraprenotazione() != null)
+				temp.setOraprenotazione(t.getOraprenotazione());
 
 			sessione.save(temp);
 			sessione.flush();

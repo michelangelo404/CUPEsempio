@@ -7,69 +7,60 @@ import jakarta.persistence.Id;
 public class Prenotazione {
 
 	@Id
-	private int Idprenotazione;
+	private int idprenotazione;
 
-	private String DataPrenotazione;
-	private String OraPrenotazione;
-	private String DataContatto;
-	private String Prestazione;
-	private String CodicePrestazione;
-	private String IdPaziente;
+	private String dataprenotazione;
+	private String oraprenotazione;
+	private String datacontatto;
+	private String codiceprestazione;
+	private String idpaziente;
 
-	public int getIdPrenotazione() {
-		return Idprenotazione;
+	public int getIdprenotazione() {
+		return idprenotazione;
 	}
 
-	public void setIdPrenotazione(int idPrenotazione) {
-		Idprenotazione = idPrenotazione;
+	public void setIdprenotazione(int idprenotazione) {
+		this.idprenotazione = idprenotazione;
 	}
 
-	public String getDataPrenotazione() {
-		return DataPrenotazione;
+	public String getDataprenotazione() {
+		return dataprenotazione;
 	}
 
-	public void setDataPrenotazione(String dataPrenotazione) {
-		DataPrenotazione = dataPrenotazione;
+	public void setDataprenotazione(String dataprenotazione) {
+		this.dataprenotazione = dataprenotazione;
 	}
 
-	public String getOraPrenotazione() {
-		return OraPrenotazione;
+	public String getOraprenotazione() {
+		return oraprenotazione;
 	}
 
-	public void setOraPrenotazione(String oraPrenotazione) {
-		OraPrenotazione = oraPrenotazione;
+	public void setOraprenotazione(String oraprenotazione) {
+		this.oraprenotazione = oraprenotazione;
 	}
 
-	public String getDataContatto() {
-		return DataContatto;
+	public String getDatacontatto() {
+		return datacontatto;
 	}
 
-	public void setDataContatto(String dataContatto) {
-		DataContatto = dataContatto;
+	public void setDatacontatto(String datacontatto) {
+		this.datacontatto = datacontatto;
 	}
 
-	public String getPrestazione() {
-		return Prestazione;
+	public String getCodiceprestazione() {
+		return codiceprestazione;
 	}
 
-	public void setPrestazione(String prestazione) {
-		Prestazione = prestazione;
+	public void setCodiceprestazione(String codiceprestazione) {
+		this.codiceprestazione = codiceprestazione;
 	}
 
-	public String getCodicePrestazione() {
-		return CodicePrestazione;
+	public String getIdpaziente() {
+		return idpaziente;
 	}
 
-	public void setCodicePrestazione(String codicePrestazione) {
-		CodicePrestazione = codicePrestazione;
-	}
-
-	public String getIdPaziente() {
-		return IdPaziente;
-	}
-
-	public void setIdPaziente(String idPaziente) {
-		IdPaziente = idPaziente;
+	public void setIdpaziente(String idpaziente) {
+		this.idpaziente = idpaziente;
 	}
 
 }

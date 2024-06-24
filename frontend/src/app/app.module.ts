@@ -26,14 +26,12 @@ import { DatePipe } from '@angular/common';
 import { FormatDataPipe } from './lista/formatData.pipe';
 import { PrenotazioneComponent } from './prenotazione/prenotazione.component';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
-import { ListaPazientiComponent } from './lista-pazienti/lista-pazienti.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     InserimentoComponent,
     ListaComponent,
-    ListaPazientiComponent,
     PrenotazioneComponent,
     AppComponent,
     FormatDataPipe

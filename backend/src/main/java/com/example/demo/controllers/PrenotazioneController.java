@@ -39,6 +39,7 @@ public class PrenotazioneController {
 
 	@PostMapping("/inserisci")
 	public Responso<Prenotazione> insertPrenotazione(@RequestBody Prenotazione objProd) {
+		System.out.println("prenotazione: " + objProd);
 		Responso res = new Responso("success", service.insert(objProd));
 		return res;
 	}
@@ -55,7 +56,7 @@ public class PrenotazioneController {
 
 	@PutMapping("/modifica/{varId}")
 	public Responso<Boolean> updatePrenotazione(@PathVariable Integer varId, @RequestBody Prenotazione objProd) {
-		objProd.setIdPrenotazione(varId);
+		objProd.setIdprenotazione(varId);
 		if(service.update(objProd))
 			return new Responso<Boolean>("success", true);
 
