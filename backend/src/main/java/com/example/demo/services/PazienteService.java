@@ -96,7 +96,7 @@ public class PazienteService implements DataAccessRepo<Paziente> {
 		boolean risultato = false;
 
 		try {
-			Paziente temp = sessione.get(Paziente.class, t.getIdPaziente());
+			Paziente temp = sessione.get(Paziente.class, t.getIdpaziente());
 
 			if(t.getNome() != null)
 				temp.setNome(t.getNome());

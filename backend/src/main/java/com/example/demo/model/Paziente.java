@@ -14,15 +14,15 @@ public class Paziente {
 
 	private String nome;
 	private String cognome;
-	private String Datanascita;
+	private String datanascita;
 	private String codicefiscale;
 
-	public int getIdPaziente() {
+	public int getIdpaziente() {
 		return Idpaziente;
 	}
 
-	public void setIdPaziente(int idPaziente) {
-		Idpaziente = idPaziente;
+	public void setIdpaziente(int idpaziente) {
+		Idpaziente = idpaziente;
 	}
 
 	public String getNome() {
@@ -41,20 +41,20 @@ public class Paziente {
 		this.cognome = cognome;
 	}
 
-	public String getDataNascita() {
-		return Datanascita;
+	public String getDatanascita() {
+		return datanascita;
 	}
 
-	public void setDataNascita(String dataNascita) {
-		Datanascita = dataNascita;
+	public void setDatanascita(String datanascita) {
+		this.datanascita = datanascita;
 	}
 
-	public String getCodiceFiscale() {
+	public String getCodicefiscale() {
 		return codicefiscale;
 	}
 
-	public void setCodiceFiscale(String Codicefiscale) {
-		this.codicefiscale = Codicefiscale;
+	public void setCodicefiscale(String codicefiscale) {
+		this.codicefiscale = codicefiscale;
 	}
 
 }

@@ -56,7 +56,7 @@ public class PazienteController {
 
 	@PutMapping("/modifica/{varId}")
 	public Responso<Boolean> updatePaziente(@PathVariable Integer varId, @RequestBody Paziente objProd) {
-		objProd.setIdPaziente(varId);
+		objProd.setIdpaziente(varId);
 		if(service.update(objProd))
 			return new Responso<Boolean>("success", true);
 
