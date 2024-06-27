@@ -1,17 +1,27 @@
-<table [dataSource]="records" mat-table class="mat-elevation-z8" style="margin-left: auto; margin-right: auto;">
-  <ng-container matColumnDef="nome">
-    <th mat-header-cell *matHeaderCellDef style="padding-right: 20px;"> Nome </th>
-    <td mat-cell *matCellDef="let record"> {{record.nome}} </td>
+<table [dataSource]="dataSource" mat-table class="mat-elevation-z8" style="margin-left: auto; margin-right: auto;">
+  <ng-container matColumnDef="dataprenotazione">
+    <th mat-header-cell *matHeaderCellDef style="padding-right: 20px;"> Data prenotazione </th>
+    <td mat-cell *matCellDef="let record"> {{record.dataprenotazione | formatData }} </td>
   </ng-container>
 
-  <ng-container matColumnDef="cognome">
-    <th mat-header-cell *matHeaderCellDef style="padding-right: 20px;"> Cognome </th>
-    <td mat-cell *matCellDef="let record"> {{record.cognome}} </td>
+  <ng-container matColumnDef="oraprenotazione">
+    <th mat-header-cell *matHeaderCellDef style="padding-right: 20px;"> Ora prenotazione </th>
+    <td mat-cell *matCellDef="let record"> {{record.oraprenotazione | formatData }} </td>
   </ng-container>
 
-  <ng-container matColumnDef="dataNascita">
-    <th mat-header-cell *matHeaderCellDef style="padding-right: 20px;"> Data di nascita </th>
-    <td mat-cell *matCellDef="let record"> {{record.dataNascita | formatData }} </td>
+  <ng-container matColumnDef="datacontatto">
+    <th mat-header-cell *matHeaderCellDef style="padding-right: 20px;"> Data contatto </th>
+    <td mat-cell *matCellDef="let record"> {{record.datacontatto | formatData }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="codiceprestazione">
+    <th mat-header-cell *matHeaderCellDef style="padding-right: 20px;"> Codice prestazione </th>
+    <td mat-cell *matCellDef="let record"> {{record.codiceprestazione}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idpaziente">
+    <th mat-header-cell *matHeaderCellDef style="padding-right: 20px;"> Id paziente </th>
+    <td mat-cell *matCellDef="let record"> {{record.idpaziente}} </td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

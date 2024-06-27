@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ServizioApiService } from '../servizi/servizio-api.service';
 import { DatePipe } from '@angular/common';
+import { MatTableDataSource } from '@angular/material/table';
+
+interface Prenotazione {
+  dataprenotazione: string;
+  oraprenotazione: string;
+  datacontatto: string;
+  codiceprestazione: string;
+  idpaziente: string;
+}
 
 @Component({
   selector: 'app-lista',
@@ -8,16 +17,18 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./lista.component.css'],
 })
 export class ListaComponent implements OnInit {
-  records: any;
 
   constructor(private servizioApi: ServizioApiService,
     private datePipe: DatePipe,) { }
 
-  displayedColumns: string[] = ['nome', 'cognome','dataNascita'];
+  displayedColumns: string[] = ['dataprenotazione', 'oraprenotazione','datacontatto','codiceprestazione','idpaziente'];
+
+  dataSource = new MatTableDataSource<Prenotazione>();
 
   ngOnInit(): void {
     this.servizioApi.getPrenotazioni().subscribe((lista: any) => {
-      this.records = lista.data;
+      this.dataSource = lista.data;
+      console.log(lista.data)
     },
       (error) => {
         console.error('Errore durante il recupero dei record', error);
